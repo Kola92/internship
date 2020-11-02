@@ -1,38 +1,177 @@
-.App {
+/******************************
+
+[Table of Contents]
+
+1. Body and some general stuff
+2. Header
+3. Main
+4. Order details
+5. Customer Information
+
+******************************/
+
+/*********************************
+1. Body and general stuff
+*********************************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Fira Code", sans-serif, monospace;
+  font-size: 2rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  
+  font-size: 1.8rem;
+  color: #49616d;
+  text-decoration: none;
+}
+a:hover,
+a:visited,
+a:active {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-decoration: none;
+}
+.selected {
+  font-weight: 700;
+  margin-right: 4rem;
+}
+
+/*********************************
+2. Header
+*********************************/
+
+header {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: crimson;
+      width: -webkit-fill-available;
+}
+nav {
+  width: -webkit-fill-available;
+}
+nav ul {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul li {
+  display: inline-block;
+  margin-right: 1.2rem;
+}
+nav ul li:last-of-type {
+  margin-right: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/*********************************
+3. Main
+*********************************/
+main h2 {
+  margin-top: 4.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+/*********************************
+4. Order details
+*********************************/
+.order-summary-title, .customer-details-title, .restaurant-details-title {
+  margin: 3rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+.item-details span {
+  display: inline;
+  font-weight: 600;
+}
+.item-name {
+  color: crimson;
+}
+.user-details span, .restaurant-details span {
+  font-weight: 600;
+}
+
+
+/*********************************
+5. Customer Information
+*********************************/
+.user-profile-image, .user-profile-details {
+  text-align: center;
+}
+.user-profile-details h3 {
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+.personal-details h3, .about-details h3 {
+  font-weight:700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.personal-details {
+  margin-bottom: 3rem;
+}
+.user-profile-image {
+  margin-bottom: 2rem;
+}
+.about-details ul li {
+  list-style: none;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.text-muted{
+  font-weight: 600;
+}
+.phone, .address {
+  margin-bottom: 2.5rem;
+}
+.personal-container h4 {
+  font-size: 1.7rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 770px) {
+  header {
+    display: block !important;
+    text-align: center;
+  }
+  header h1 {
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 450px) {
+  .selected {
+    margin-right: 0 !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 765px) {
+  .user-profile {
+    margin-bottom: 2.5rem;
   }
 }
